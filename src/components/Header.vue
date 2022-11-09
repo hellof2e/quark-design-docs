@@ -4,7 +4,7 @@
     :class="{ sticky: isHomePage() }"
     class="relative top-0 z-30 h-[72px] backdrop-blur backdrop-filter firefox:bg-opacity-90"
   >
-    <div class="mx-auto max-w-8xl xl:px-8">
+    <div class="mx-auto max-w-7xl xl:px-8">
       <div
         class="flex items-center justify-between border-b border-solid border-gray-200 dark:border-gray-800 px-4 py-5 sm:px-6 lg:px-8 xl:px-0"
       >
