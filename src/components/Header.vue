@@ -27,7 +27,7 @@
 
           <!-- 指南 / 组件 -->
           <div class="nav-item" v-for="item in header" :key="item.name">
-            <template v-if="docMd === 'react' && item.name === 'Components'">
+            <template v-if="docMd === 'react' && item.name === 'Component'">
               <a class="transition-colors hover:text-gray-700 dark:hover:text-gray-400"
                 :class="isActive(item.name) ? 'text-gray-400 dark:text-gray-400 111' : 'text-gray-500 dark:text-gray-500'"
                 :href="`${ isZhLang ? `${item.pathName}-react` : `${item.pathEnName}-react`}`">
@@ -96,7 +96,7 @@
     },
     setup() {
       const version = ref()
-      const isZhLang = localStorage.getItem("language") === "zh-CN" ? true : false;
+      const isZhLang = localStorage.getItem("language") === "zh-CN";
       const route = useRoute();
       let packages = [];
       nav.forEach((item) => {
@@ -131,13 +131,7 @@
       const isActive = computed(() => {
         return function (name: string) {
           const lName = name.toLowerCase();
-          if (lName === "components") {
-            return route.path.includes("component");
-          } else if (lName === 'pages') {
-            return route.path.includes("pages");
-          } else {
-            return route.path.includes("guide");
-          }
+          return route.path.includes(lName)
         };
       });
 

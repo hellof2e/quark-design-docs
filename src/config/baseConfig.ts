@@ -9,7 +9,7 @@ export default {
       pathEnName: "#/en-US/guide/introduction", // TODO: 临时方案
     },
     {
-      name: "Components",
+      name: "Component",
       cName: "组件",
       path: "#/component/button",
       pathName: "#/zh-CN/component/button",

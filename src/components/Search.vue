@@ -60,7 +60,7 @@ export default defineComponent({
 
       // command + k 快捷键
       document.onkeydown = function(event){
-				if(event.metaKey && event.keyCode == 75){
+				if(event.metaKey && event.keyCode === 75){
           // console.log(refInput, 111);
           nextTick(() => {
             refInput.value.focus();
@@ -111,10 +111,10 @@ export default defineComponent({
 
     const choseList = (e) => {
       let searchIndex = data.searchIndex;
-      if (e.keyCode == 40) {
+      if (e.keyCode === 40) {
         searchIndex++;
       }
-      if (e.keyCode == 38) {
+      if (e.keyCode === 38) {
         searchIndex--;
       }
       if (searchIndex < 0) {
@@ -126,7 +126,7 @@ export default defineComponent({
         if (cName) {
           data.searchCurName = cName;
           data.searchIndex = searchIndex;
-          if (e.keyCode == 13) {
+          if (e.keyCode === 13) {
             router.push({
               path: `/${localStorage.getItem("language")}/component/${
                 searchList[searchIndex].name
@@ -146,7 +146,7 @@ export default defineComponent({
       choseList,
       onblur,
       checklist,
-      isZhLang: localStorage.getItem("language") === "zh-CN" ? true : false,
+      isZhLang: localStorage.getItem("language") === "zh-CN",
       refInput,
       quickSearch,
     };

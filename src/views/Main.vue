@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent, onMounted, reactive, toRefs, ref } from "vue";
+  import { defineComponent, onMounted } from "vue";
   import { useI18n } from "vue-i18n";
   import Header from "@/components/Header.vue";
   import ComponentsOverview from "./components/overview/index.vue";
@@ -52,7 +52,7 @@
       });
 
       return {
-        isZhLang: localStorage.getItem("language") === "zh-CN" ? true : false,
+        isZhLang: localStorage.getItem("language") === "zh-CN",
         t,
       };
     },

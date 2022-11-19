@@ -150,7 +150,7 @@ export default defineComponent({
     });
 
     const getIsGuaid = (path: string) => {
-      state.isGuideNav = path.indexOf("guide") > -1 ? true : false;
+      state.isGuideNav = path.indexOf("guide") > -1;
     };
 
     onBeforeRouteUpdate((to: any) => {
@@ -160,7 +160,7 @@ export default defineComponent({
     return {
       ...toRefs(data),
       ...toRefs(state),
-      isZhLang: localStorage.getItem("language") === "zh-CN" ? true : false,
+      isZhLang: localStorage.getItem("language") === "zh-CN",
       isActive,
       docMd: localStorage.getItem("docMd"),
       nav: reactive(nav),

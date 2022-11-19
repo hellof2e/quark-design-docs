@@ -39,7 +39,7 @@ export default defineComponent({
   },
   setup() {
     const isZhLang =
-      localStorage.getItem("language") === "zh-CN" ? true : false;
+      localStorage.getItem("language") === "zh-CN";
     const docMd = localStorage.getItem("docMd");
     const route = useRoute();
     // const router = useRouter();

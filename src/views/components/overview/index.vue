@@ -511,7 +511,7 @@
 
       const docMd = localStorage.getItem("docMd");
       
-      const isZhLang = localStorage.getItem("language") === "zh-CN" ? true : false;
+      const isZhLang = localStorage.getItem("language") === "zh-CN";
       
       return { 
         t,
