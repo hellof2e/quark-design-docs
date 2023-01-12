@@ -46,7 +46,7 @@
           <a
             class="nav-item-a-link flex items-center justify-between text-gray-400 dark:text-gray-500 transition-colors hover:text-gray-700 dark:hover:text-gray-400"
             href="https://github.com/hellof2e/quark-design">
-            Github
+            GitHub
             <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100"
               width="15" height="15">
               <path fill="currentColor"
